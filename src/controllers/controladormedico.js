@@ -1,0 +1,9 @@
+let nombresMedico 
+let matriculaProfesionalMedico 
+let especialidadMedico
+let salarioMedico
+let correoMedico
+let ipsMedico
+let telefonoMedico
+let direccionMedico
+let disponibleFinDeSemanaMedico 
