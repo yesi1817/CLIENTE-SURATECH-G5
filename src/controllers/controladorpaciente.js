@@ -12,3 +12,41 @@ let polizaPaciente=document.getElementById("polizapaciente")
 let ipsPaciente =document.getElementById("ipspaciente")
 let grupoIngresoPaciente =document.getElementById("ingresospaciente")
 let fechaAfiliacionPaciente=document.getElementById("afiliacionpaciente")
+
+//3. Crear una variable para asociarla al id del boton que tengo en html
+
+let botonRegistroPaciente=document.getElementById("botonregistropaciente")
+
+//4. Detectamos acciones o eventos en el boton 
+
+botonRegistroPaciente.addEventListener("click", function(evento){
+    evento.preventDefault()
+   
+
+//5. Se crea un JSON que capture todos los datos del formulario 
+
+let datosFormularioPaciente={
+    nombres: nombrePaciente.value,
+    fechaNacimiento: fechaNacimientoPaciente.value,
+    ciudad: ciudadPaciente.value,
+    correo: correoPaciente.value,
+    telefono: telefonoPaciente.value,
+    ips: ipsPaciente.value,
+    grupoIngresos: grupoIngresoPaciente.value,
+    tienePoliza: polizaPaciente.value,
+    fechaAfiliacion: fechaAfiliacionPaciente.value
+}
+
+//6. Se envian los datos al back 
+console.log(datosFormularioPaciente)
+
+
+
+
+
+Swal.fire({
+    title: "Registro Exitoso!",
+    text: "Ya eres parte de nuestra gran familia!",
+    icon: "success"
+  });
+})
