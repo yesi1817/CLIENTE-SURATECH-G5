@@ -1,3 +1,5 @@
+import {registrarMedicamento} from "./services/servicioMedicamento.js"
+
 let nombreMedicamento=document.getElementById("nombremedicamento")
 let presentacionMedicamento=document.getElementById("presentacionmedicamento")
 let dosisMedicamento=document.getElementById("dosismedicamento")
@@ -20,16 +22,20 @@ botonRegistroMedicamento.addEventListener("click", function(evento){
         laboratorio : laboratorioMedicamento.value,
         contraindicaciones : contraindicacionesMedicamento.value,
         registro : registroMedicamento.value,
-        copago : copagoMedicamento.value
-        
-        
+        copago : true
     }
 
     console.log(datosFormularioMedicamento)
+    registrarMedicamento(datosFormularioMedicamento)
+    .then(function(respuestBack){
+        console.log(respuestBack)
+        Swal.fire({
+            title: "Registro Exitoso!",
+            text: "Ya eres parte de nuestra gran familia!",
+            icon: "success"
+          });
+   
+    })
         
-    Swal.fire({
-        title: "Registro Exitoso!",
-        text: "Ya eres parte de nuestra gran familia!",
-        icon: "success"
-      });
+   
     })
