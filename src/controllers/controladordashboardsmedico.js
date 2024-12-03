@@ -1,4 +1,4 @@
-import { buscarMedico} from "./services/serviciosMedicos"
+import { buscarMedico} from "./services/servicioMedico.js"
 buscarMedico()
 .then(function(respuestBack){
     console.log(respuestBack)

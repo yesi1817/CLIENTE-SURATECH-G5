@@ -17,7 +17,7 @@ buscarEnfermedad()
     sintomas.textContent=enfermedades.sintomas
     let clasificacion=document.createElement("h2")
     clasificacion.textContent=enfermedades.clasificacion
-    let grado=document.createElement("h2")
+    let grado=document.createElement("p")
     grado.textContent=enfermedades.grado
     let probabilidadVida=document.createElement("h2")
     probabilidadVida.textContent=enfermedades.probabilidadVida

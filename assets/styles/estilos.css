@@ -34,3 +34,12 @@
     z-index: -1;
 
 }
+
+.banner3{
+    background-image: url("../img/fondomedicamentos.avif");
+    background-position: top center;
+    background-size: cover ;
+    background-attachment: local;
+    position: relative;
+    z-index: -1;
+}

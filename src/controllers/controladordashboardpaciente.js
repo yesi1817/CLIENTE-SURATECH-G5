@@ -1,6 +1,6 @@
-import { buscarPaciente} from "./services/serviciosPacientes.js"
+import { buscarPacientes} from "./services/serviciosPaciente.js"
 
-buscarPaciente()
+buscarPacientes()
 .then(function(respuestBack){
     console.log(respuestBack)
     let fila=document.getElementById("fila")
@@ -14,21 +14,21 @@ buscarPaciente()
     tarjeta.classList.add("card", "p-5", "h-100", "shadow")
     let nombre=document.createElement("h2")
     nombre.textContent=paciente.nombres
-    let fechaNacimiento=document.createElement("h2")
+    let fechaNacimiento=document.createElement("p")
     fechaNacimiento.textContent=paciente.fechaNacimiento
-    let ciudad=document.createElement("h2")
+    let ciudad=document.createElement("p")
     ciudad.textContent=paciente.ciudad
-    let correo=document.createElement("h2")
+    let correo=document.createElement("p")
     correo.textContent=paciente.correo
-    let telefono=document.createElement("h2")
+    let telefono=document.createElement("p")
     telefono.textContent=paciente.telefono
-    let ips=document.createElement("h2")
+    let ips=document.createElement("p")
     ips.textContent=paciente.ips
-    let grupoIngresos=document.createElement("h2")
+    let grupoIngresos=document.createElement("p")
     grupoIngresos.textContent=paciente.grupoIngresos
-    let tienePoliza=document.createElement("h2")
+    let tienePoliza=document.createElement("p")
     tienePoliza.textContent=paciente.tienePoliza
-    let fechaAfiliacion=document.createElement("h2")
+    let fechaAfiliacion=document.createElement("p")
     fechaAfiliacion.textContent=paciente.fechaAfiliacion
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(fechaNacimiento)

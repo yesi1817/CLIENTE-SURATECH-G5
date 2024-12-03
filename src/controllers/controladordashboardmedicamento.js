@@ -1,30 +1,30 @@
-import { buscarmedicamento} from "./services/serviciosmedicamento.js"
+import {buscarMedicamento} from "./services/servicioMedicamento.js"
 
-buscarmedicamento()
+buscarMedicamento()
 .then(function(respuestBack){
     console.log(respuestBack)
     let fila=document.getElementById("fila")
-    respuestBack.forEach(function(medicamentos){
+    respuestBack.forEach(function(medicamento){
     let columna=document.createElement("div")
     columna.classList.add("col")
     let tarjeta=document.createElement("div")
     tarjeta.classList.add("card", "p-5", "h-100", "shadow")
     let nombre=document.createElement("h2")
     nombre.textContent=medicamento.nombre
-    let presentacion=document.createElement("h2")
+    let presentacion=document.createElement("p")
     presentacion.textContent=medicamento.presentacion
-    let dosis=document.createElement("h2")
+    let dosis=document.createElement("p")
     dosis.textContent=medicamento.dosis
-    let laboratorio=document.createElement("h2")
+    let laboratorio=document.createElement("p")
     laboratorio.textContent=medicamento.laboratorio
-    let fechaCaducidad=document.createElement("h2")
+    let fechaCaducidad=document.createElement("p")
     fechaCaducidad.textContent=medicamento.fechaCaducidad
-    let contraIndicaciones=document.createElement("h2")
+    let contraIndicaciones=document.createElement("p")
     contraIndicaciones.textContent=medicamento.contraIndicaciones
-    let registro=document.createElement("h2")
-    registro.textContent=medicamento.registro
-    let tieneCopago=document.createElement("h2")
-    tieneCopago.textContent=medicamento.tieneCopago
+    let registroInvima=document.createElement("p")
+    registroInvima.textContent=medicamento.registroInvima
+    let copago=document.createElement("p")
+    copago.textContent=medicamento.copago
 
    
     tarjeta.appendChild(nombre)
@@ -33,8 +33,8 @@ buscarmedicamento()
     tarjeta.appendChild(laboratorio)
     tarjeta.appendChild(fechaCaducidad)
     tarjeta.appendChild(contraIndicaciones)
-    tarjeta.appendChild(registro)
-    tarjeta.appendChild(tieneCopago)
+    tarjeta.appendChild(registroInvima)
+    tarjeta.appendChild(copago)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 });

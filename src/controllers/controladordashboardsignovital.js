@@ -1,4 +1,4 @@
-import { buscarSignoVital} from "./services/serviciosSignoVital.js"
+import { buscarSignoVital} from "./services/servicioSignoVital.js"
 
 buscarSignoVital()
 .then(function(respuestBack){

@@ -15,27 +15,28 @@ botonRegistroMedicamento.addEventListener("click", function(evento){
     evento.preventDefault()
 
     let datosFormularioMedicamento={
-        nombre : nombreMedicamento.value,
-        presentacion : presentacionMedicamento.value,
-        dosis : dosisMedicamento.value,
-        fechaCaducidad : fechaCaducidadMedicamento.value,
-        laboratorio : laboratorioMedicamento.value,
-        contraindicaciones : contraindicacionesMedicamento.value,
-        registro : registroMedicamento.value,
-        copago : true
+        nombre: nombreMedicamento.value,
+        presentacion: presentacionMedicamento.value,
+        dosis: dosisMedicamento.value,
+        laboratorio: laboratorioMedicamento.value,
+        fechaCaducidad: fechaCaducidadMedicamento.value,
+        contraIndicaciones: contraindicacionesMedicamento.value,
+        registroInvima: registroMedicamento.value,
+        copago: true
     }
-
+    console.log("Datos capturados del formulario:")
     console.log(datosFormularioMedicamento)
     registrarMedicamento(datosFormularioMedicamento)
     .then(function(respuestBack){
-        console.log(respuestBack)
+        console.log("Respuesta Backend:");
+        console.log(respuestBack);
+
         Swal.fire({
             title: "Registro Exitoso!",
             text: "Ya eres parte de nuestra gran familia!",
             icon: "success"
           });
    
-    })
+    }).catch((error)=>{ console.log(error)});
         
-   
-    })
+})

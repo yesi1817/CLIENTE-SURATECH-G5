@@ -1,7 +1,5 @@
 export async function buscarEnfermedad(){
     const URL="http://localhost:8080/api/Enfermedad"
-
- 
 let peticion={
     method:"GET"
 }

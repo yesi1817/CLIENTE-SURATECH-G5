@@ -1,4 +1,4 @@
-import { registrarPaciente } from "./services/serviciosPacientes.js"
+import { registrarPaciente } from "./services/serviciosPaciente.js"
 
 let nombrePaciente =document.getElementById("nombrepaciente")
 let correoPaciente =document.getElementById("correopaciente")
@@ -37,8 +37,6 @@ registrarPaciente(datosFormularioPaciente)
       });
 
 })
-
-
 })
 
 
